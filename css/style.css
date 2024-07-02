@@ -1,0 +1,107 @@
+@media only screen and (max-width: 600px) {
+    .nav-container {
+        flex-direction: column;
+    }
+    
+    .menu {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .logo-icon {
+        margin-bottom: 14px;
+    }
+    
+}
+
+body {
+    font-family: Helvetica;
+}
+
+main {
+    padding: 32px;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-icon {
+    height: 50px;
+    width: 50px;
+
+    /* Image Icon */
+    background-image: url(https://picsum.photos/200/300);
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu > button {
+    background-color: white;
+    padding: 8px 16px;
+    border: 1px solid gray;
+    cursor: pointer;
+}
+
+.menu > button:hover {
+    background-color: yellow;
+    color: green;
+}
+.banner-container {
+    height: 350px;
+    width: 100%;
+    border: 1px solid;
+}
+
+.profile-container{
+    display: flex;
+    justify-content: space-evenly
+}
+
+.profile-item {
+    text-align: center;
+    flex: 1;
+    text-align: -webkit-center;
+}
+
+.profile-icon {
+    height: 50px;
+    width: 50px;
+
+    /* Image icon */
+    background-image: url(../assets/cth-img.png);
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.divider {
+    flex: 2;
+}
+
+.message-container {
+    display: flex;
+}
+
+.field-container {
+    flex: 1;
+    border: 1px solid;
+}
+
+.result-container {
+    flex: 1;
+    border: 1px solid;
+}
+
+footer > p {
+    text-align: end; 
+    padding: 10px; 
+    padding-right: 30px;
+}
+
+/* Message field */
