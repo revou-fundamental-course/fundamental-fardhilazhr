@@ -8,24 +8,54 @@
         flex-direction: column;
     }
 
+    .menu > a {
+        align-self: center;
+    }
+
     .logo-icon {
         margin-bottom: 14px;
     }
-    
+
+    .profile-container {
+        flex-direction: column;
+    }
+
+    .profile-content > p {
+        text-align: center;
+    }
+
+    .message-container {
+        flex-direction: column;
+    }
+
+    .user-input {
+        flex-direction: column;
+    }
+
+    .result-title {
+        font-size: 10pt;
+    }
+
+    .result-content {
+        font-size: 10pt;
+    }
 }
 
 body {
     font-family: Helvetica;
+    background-color: #DFDFDF;
+    /* background-image: linear-gradient(to right, #D1D1D1, #DFDFDF); */
 }
 
 main {
-    padding: 32px;
+    padding: 0 32px;
 }
 
 .nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px;
 }
 
 .logo-icon {
@@ -33,7 +63,7 @@ main {
     width: 50px;
 
     /* Image Icon */
-    background-image: url(https://picsum.photos/200/300);
+    background-image: url(../assets/profile.png);
     background-size: cover;
     border-radius: 50%;
 }
@@ -42,60 +72,182 @@ main {
     display: flex;
 }
 
-.menu > button {
-    background-color: white;
-    padding: 8px 16px;
-    border: 1px solid gray;
+.menu > a {
+    text-decoration-line: none;
+    background-color: #DFDFDF;
+    padding: 10px 16px;
+    margin-right: 2px;
+    border: none;
     cursor: pointer;
 }
 
-.menu > button:hover {
-    background-color: yellow;
-    color: green;
-}
-.banner-container {
-    height: 350px;
-    width: 100%;
-    border: 1px solid;
+.menu > a:hover {
+    background-image: linear-gradient(to right, black, #0021FF);
+    opacity: 0.9;
+    border-radius: 6px;
+    color: white;
+    
 }
 
-.profile-container{
+/* Home Section */
+#home {
+    margin-bottom: 20px;
+}
+
+/* Banner  Section */
+.banner-container {
+    position: relative;
+    height: 450px;
+    width: 100%;
+    overflow: hidden;
+    border: 3px solid white;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.slide-banner {
+    display: none;
+}
+
+.slide-banner img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* Navigation buttons */
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 15px;
+    margin-top: -22px;
+    color: black;
+    opacity: 0.8;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button.prev {
+    left: 0;
+}
+
+button.next {
+    right: 0;
+}
+
+
+/* Profile Section */
+.profile-container {
     display: flex;
-    justify-content: space-evenly
+    /* justify-content: space-evenly */
 }
 
 .profile-item {
     text-align: center;
     flex: 1;
-    text-align: -webkit-center;
 }
 
-.profile-icon {
-    height: 50px;
-    width: 50px;
-
-    /* Image icon */
-    background-image: url(../assets/cth-img.png);
-    background-size: cover;
-    border-radius: 50%;
+.slide-profile {
+    display: none;
 }
 
-.divider {
-    flex: 2;
+.slide-profile img {
+    width: 50%;
+    height: 200px;
+    object-fit: scale-down;
+    border-radius: 15px;
 }
+
+
+.Profile-content {
+    flex: 4;
+    align-content: center;
+    font-size: 11pt;
+    margin-right: 50px
+}
+
+#btnShow {
+    font-weight: bold;
+    color: #0021FF;
+    background-color: #DFDFDF;
+    border: none;
+    cursor: pointer;
+    text-shadow: 0 0 black;
+}
+
+#more {
+    display: none;
+}
+
+/* Portofolio Content */
+.porto-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    flex-flow: wrap;
+}
+
+.porto-content {
+    margin: 10px;
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.porto-image{
+    background-color: white;
+    height: 250px;
+    width: 250px; 
+    margin-bottom: 5px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px #999999;
+}
+
+.porto-title {
+    background-color: white;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 10pt;
+    font-weight: bold;
+    padding: 10px 0;
+    margin-top: 5px;
+    box-shadow: 1px 1px 10px #999999;
+    cursor: pointer;
+    text-decoration-line: none;
+}
+
+/* Message Section */
 
 .message-container {
     display: flex;
+    padding: 10px;
+    background-color: #DFDFDF;
+    border-radius: 15px;
+    border: 5px solid white;
+    margin-bottom: 20px;
+
+    /* border-width: 2px;
+    border-style: solid; */
+    /* border-image-slice: 1;
+    border-image-source: linear-gradient(to right, black, #0021FF); */
 }
 
 .field-container {
-    flex: 1;
-    border: 1px solid;
+    flex: 2;
+    background-color: white;
+    border-radius: 5px;
+    margin: 10px;
 }
 
 .result-container {
     flex: 1;
-    border: 1px solid;
+    /* border-radius: 15px; */
+    align-content: center;
 }
 
 footer > p {
@@ -105,3 +257,84 @@ footer > p {
 }
 
 /* Message field */
+.field-container {
+    padding: 20px;
+}
+
+.user-input > div {
+    display: flex;
+}
+
+.label-input {
+    flex: 1;
+    margin-top: 15px;
+}
+
+.user-input > input {
+    flex: 4;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0px 10px 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.radio-container {
+    align-items: center;
+}
+
+.input-radio {
+    flex: 4;
+    padding: 10px 10px;
+    margin: 8px 0px;
+}
+
+.user-input > textarea {
+    flex: 4;
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    margin: 10px 0px 10px 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.button-send {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0px;
+    cursor: pointer;
+    background-image: linear-gradient(to right, black, #0021FF);
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 1px 1px 1px rgba(0,0,0,0.1);
+}
+
+
+/* Result field */
+.result-title {
+    font-size: 12pt;
+    font-weight: bold;
+    background-color: white;
+    margin: 10px;
+    border-radius: 5px;
+    height: 15%;
+    align-content: center;
+    text-align: center;
+}
+
+.result-content {
+    font-size: 12pt;
+    background-color: white;
+    height: 40%;
+    margin: 10px;
+    border-radius: 5px;
+    align-content: center;
+    padding: 20px;
+}

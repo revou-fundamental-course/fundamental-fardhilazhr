@@ -13,10 +13,10 @@
             <img class="logo-icon"></div>
 
             <div class="menu">
-                <button>Homie</button>
-                <button>Profile</button>
-                <button>Portfolio</button>
-                <button>Message me</button>
+                <a href="#home">Home</a>
+                <a href="#profile">Profile</a>
+                <a href="#portofolio">Portfolio</a>
+                <a href="#contact">Contact me</a>
             </div>
         </header>
 
@@ -26,13 +26,27 @@
          <!-- Home Content -->
             <section id="home">
                 <header>
-                    <h1>Hi User, Welcome To Website</h1>
+                    <h1 id="greeting" style="text-align: center;"></h1>
                 </header>
 
                 <article>
-                    <p>Ini adalah website latihan pertama</p>
+                    <p style="text-align: center;">Welcome to my Portofolio</p>
 
-                    <div class="banner-container"></div>
+                    <div class="banner-container">
+                        <div class="slide-banner">
+                            <img src="../assets/banner1.png" alt="Slide 1">
+                        </div>
+                        <div class="slide-banner">
+                            <img src="../assets/banner2.png" alt="Slide 2">
+                        </div>
+                        <div class="slide-banner">
+                            <img src="../assets/banner3.png" alt="Slide 3">
+                        </div>
+
+                        <!-- Navigation buttons -->
+                        <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+                        <button class="next" onclick="plusSlides(1)">&#10095;</button>
+                    </div>
                 </article>
             </section>
 
@@ -46,75 +60,104 @@
 
             <article class="profile-container">
                 <div class="profile-item">
-                    <div class="profile-icon"></div>
-                    <p>Fardhila</p>
+                    <div class="slide-profile">
+                        <img src="../assets/profile1.png" alt="Slide 1">
+                    </div>
+                    <div class="slide-profile">
+                        <img src="../assets/profile2.png" alt="Slide 2">
+                    </div>
+                    <div class="slide-profile">
+                        <img src="../assets/profile3.png" alt="Slide 3">
+                    </div>
                 </div>
                 
-                <div class="profile-item">
-                    <div class="profile-icon"></div>
-                    <p>Fardhila</p>
-                </div>
 
-                <div class="profile-item">
-                    <div class="profile-icon"></div>
-                    <p>Fardhila</p>
+                <div class="Profile-content">
+                    <p style="text-align: justify;">I am a fresh graduate of Universitas Multimedia Nusantara, majoring in Information Systems. I have experience in programming languages and software competencies through software development projects, internship activities, certifications, and academic achievements. I have an interest in Information Technology, business, and data analytics, with expertise in designing applications and data processing for visualization. I participate in st <span id="dots">...</span> <span id="more">udent activities and volunteer activity that hone teamwork communication, leadership, and management skills. I am a fast-paced, detail and goal-oriented individual who is eager to take on challenges that will help me learn and grow. I am currently seeking opportunities to develop my skills in the industrial world, particularly in product analysis, IT system analysis, quality assurance.</span> <button onclick="showMore()" id="btnShow">Read more about me!</button> </p>        
                 </div>
-
-                <div class="divider"></div>
             </article>
           </section>
 
           <hr/>
 
          <!-- Portfolio -->
-          <section>
+          <section id="portofolio">
             <header>
-                <h1>Portfolio</h1>
+                <h1>Portofolio</h1>
             </header>
+
+            <div class="porto-container">
+                <article class="porto-content">
+                    <img class="porto-image" src="../assets/porto1.png" alt="porto1">
+                    <a href="https://drive.google.com/drive/folders/1rgjv1EaNA3nsVWYKHK9rqg0OBFsl2-u-?usp=sharing" class="porto-title">REALKO</a>
+                    <!-- <div class="porto-title">REALKO</div> -->
+                </article>
+                <article class="porto-content">
+                    <img class="porto-image" src="../assets/porto2.png" alt="porto1">
+                    <a href="https://drive.google.com/drive/folders/1VZ-0KyXiu1FXRA7lPQndD928Ee9UX4RW?usp=drive_link" class="porto-title">VASCO</a>
+                </article>
+                <article class="porto-content">
+                    <img class="porto-image" src="../assets/porto3.png" alt="porto1">
+                    <a class="porto-title">YUSAFE</a>
+                </article>
+                <!-- <article class="porto-content">
+                    <div class="porto-image"></div>
+                    <div class="porto-title">test</div>
+                </article>
+                <article class="porto-content">
+                    <div class="porto-image"></div>
+                    <div class="porto-title">test</div>
+                </article> -->
+            </div>
           </section>
 
           <hr/>
           
          <!-- Message Me -->
-          <section>
+          <section id="contact">
             <header>
-                <h1>Message Me</h1>
+                <h1>Contact Me</h1>
             </header>
 
             <div class="message-container">
                 <article class="field-container">
-                    <form action="" method="get" class="user-input">
+                    <form action="" method="get" class="user-input" id="userForm">
                         <div class="user-input">
-                            <label for="name">Nama :</label>
+                            <label class="label-input" for="name">Name*</label>
                             <input type="text" name="name" id="name" required />
                         </div>
                         <div class="user-input">
-                            <label for="dob">Tanggal Lahir :</label>
+                            <label class="label-input" for="dob">Date of Birth*</label>
                             <input type="date" name="dob" id="dob" required />
                         </div>
                         <div class="user-input">
-                            <label>Jenis Kelamin :</label>
-
-                            <div>
-                                <input type="radio" id="laki-laki" value="Laki-Laki">
-                                <label for="laki-laki">Laki-Laki</label>
-                            </div>
-
-                            <div>
-                                <input type="radio" id="perempuan" value="Perempuan">
-                                <label for="perempuan">Laki-Laki</label>
+                            <label class="label-input">Gender</label>
+                            <div class="input-radio">
+                                <div class="radio-container">
+                                    <input type="radio" name="gender" id="male" value="Male">
+                                    <label for="male">Male</label>
+                                </div>
+                                <div class="radio-container">
+                                    <input type="radio" name="gender" id="female" value="Female">
+                                    <label for="female">Female</label>
+                                </div>
                             </div>
                         </div>
                         <div class="user-input">
-                            <label for="pesan">pesan :</label>
+                            <label class="label-input" for="pesan">Message</label>
                             <textarea id="pesan"></textarea>
                         </div>
                     </form>
-                    <button type="submit">Send</button>
+                    <button class="button-send" type="button" onclick="validationForm()">Send</button>
                 </article>
     
                 <article class="result-container">
-    
+                    <div class="result-title" id="resultTitle">
+                    </div>
+
+                    <div class="result-content" id="resultContent">
+
+                    </div>
                 </article>
             </div>
 
@@ -125,8 +168,11 @@
          <hr/>
 
          <footer>
+            
             <p>Created by Zahra</p>
          </footer>
+
+         <script src="js/script.js"></script>
 
     </body>
 </html>
